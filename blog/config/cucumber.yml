@@ -1,0 +1,5 @@
+<%
+std_opts = " --strict --tags ~@wip"
+%>
+default: <%= std_opts %>
+wip: --tags @wip:3 --wip features

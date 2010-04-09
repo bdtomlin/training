@@ -1,0 +1,16 @@
+<h1><%= @article.title %></h1>
+
+<%=h @article.body %>
+
+<%form_for [@article, @comment] do |f| %>
+  
+  <%= label(:comment, :body, "comment") %><br />
+  <%= f.text_area :body %>
+  
+  <%= f.submit "Add Comment" %>
+
+<% end %>
+
+<% @comments.each do |comment| %>
+  <%= h comment.body %>
+<% end %>
